@@ -9,11 +9,15 @@ function User(props) {
     //   balance: 9.421,
     //   picture: Person1
     // }
-
+    const style ={
+        // background: URL(`{props.picture}`),
+    }
     return (
         <div className="user-l">
-            <span className="number">#{props.number}</span>
-            <img className="picture" src={props.picture} alt="Picture" />
+        <div className="pfp" style={{backgroundImage: `url(${props.picture})`}}>
+        <span className="number">#{props.number}</span>
+            {/* <img className="picture" src={props.picture} alt="Picture" /> */}
+        </div>
             <div className="info">
                 <h3>{props.name}</h3>
                 <p className="crypto-balance">
